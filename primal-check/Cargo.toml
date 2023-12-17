@@ -22,5 +22,6 @@ num-integer = { version = "0.1", default-features = false }
 primal = { path = "..", version = "0.3" }
 
 [features]
+std = []
 libm = ["dep:libm"]
 unstable = []

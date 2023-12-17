@@ -1,4 +1,4 @@
-#![no_std]
+#![cfg_attr(not(feature = "std"), no_std)]
 //! Check some primality-related properties of numbers.
 //!
 //! This crate is designed to be used via `primal`.
