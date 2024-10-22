@@ -1,7 +1,7 @@
 [package]
 
 name = "primal"
-version = "0.4.0"
+version = "0.3.3"
 authors = ["Huon Wilson <dbau.pp@gmail.com>"]
 edition = "2021"
 
@@ -55,3 +55,8 @@ tag-name = "{{crate_name}}-{{version}}"
 [package.metadata.release]
 sign-tag = true
 tag-name = "{{crate_name}}-{{version}}"
+
+# Make sure all our slow_tests still check overflows in --release tests.
+# (This doesn't affect downstream dependents building these libraries.)
+[profile.release]
+overflow-checks = true
