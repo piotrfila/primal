@@ -249,7 +249,7 @@
 //! This takes 6 <em>micro</em>seconds: more than 500,000&times;
 //! faster than the iterator!
 
-#![cfg_attr(feature = "no-std", no_std)]
+#![cfg_attr(not(feature = "std"), no_std)]
 
 pub use primal_estimate::prime_pi as estimate_prime_pi;
 pub use primal_estimate::nth_prime as estimate_nth_prime;
